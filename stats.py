@@ -26,3 +26,23 @@ def get_num_characters(text_from_book):
     return letter_count_dict
 
 
+def sort_on(items):
+    return items["num"]
+
+
+def char_count(numbers_of_letter_dict):
+
+    new_list = []
+
+
+    for char, num in numbers_of_letter_dict.items():
+        new_dict = {
+            "char" : char,
+            "num" : num
+         }
+        new_list.append(new_dict)
+    new_list.sort(key=sort_on, reverse=True)
+
+    return new_list
+
+
